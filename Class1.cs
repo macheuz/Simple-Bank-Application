@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace testando_solo
 {
-    internal class ContaPoupanca : Conta
+    internal class ContaPoupanca : Account
     {
         public override bool Saca(double valor)
         {

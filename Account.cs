@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace testando_solo
 {
-    internal class Conta
+    internal class Account
     {
         private string titular;
         private int contanumero;
@@ -29,7 +29,7 @@ namespace testando_solo
         }
         public virtual bool Saca(double valor)
         {
-            if (this.saldo > valor)
+            if (this.saldo >= valor)
             {
                 this.saldo -= valor;
                 return true;
