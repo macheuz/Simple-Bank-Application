@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace testando_solo
 {
-    internal class Account
+    public class Account
     {
         private string titular;
         private int contanumero;

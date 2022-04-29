@@ -42,6 +42,7 @@
             this.btnSaque = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.comboContas = new System.Windows.Forms.ComboBox();
+            this.botaoNovaConta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -162,11 +163,22 @@
             this.comboContas.TabIndex = 15;
             this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
             // 
+            // botaoNovaConta
+            // 
+            this.botaoNovaConta.Location = new System.Drawing.Point(26, 401);
+            this.botaoNovaConta.Name = "botaoNovaConta";
+            this.botaoNovaConta.Size = new System.Drawing.Size(101, 23);
+            this.botaoNovaConta.TabIndex = 16;
+            this.botaoNovaConta.Text = "Nova Conta";
+            this.botaoNovaConta.UseVisualStyleBackColor = true;
+            this.botaoNovaConta.Click += new System.EventHandler(this.botaoNovaConta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botaoNovaConta);
             this.Controls.Add(this.comboContas);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSaque);
@@ -205,5 +217,6 @@
         private Button btnSaque;
         private Label label6;
         private ComboBox comboContas;
+        private Button botaoNovaConta;
     }
 }

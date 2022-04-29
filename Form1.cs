@@ -3,29 +3,35 @@ namespace testando_solo
     public partial class Form1 : Form
     {
         private Account[] contas;
+        private int numeroDeContas;
         public Form1()
         {
             InitializeComponent();
         }
+        public void AdicionaConta(Account conta)
+        {
+            this.contas[this.numeroDeContas] = conta;
+            this.numeroDeContas++;
+            comboContas.Items.Add("Titular: " + conta.Titular);
+        }
 
         private void Formulario(object sender, EventArgs e)
         {
-            contas = new Account[3];
-            this.contas[0] = new Account();
-            this.contas[0].Titular = ("Victor");
-            this.contas[0].ContaNumero = 1;
-            this.contas[1] = new Account();
-            this.contas[1].Titular = ("Mauricio");
-            this.contas[1].ContaNumero = 2;
-            this.contas[2] = new Account();
-            this.contas[2].Titular = ("Osni");
-            this.contas[2].ContaNumero = 3;
-            
-            foreach (Account conta in contas)
-            {
-                comboContas.Items.Add(conta.Titular);
-            }
+            contas = new Account[30];
+            Account c1 = new Account();
+            c1.Titular = "Victor";
+            c1.ContaNumero = 1;
+            this.AdicionaConta(c1);
 
+            Account c2 = new Account();
+            c2.Titular = "Marcos";
+            c2.ContaNumero = 2;
+            this.AdicionaConta(c2);
+
+            Account c3 = new Account();
+            c1.Titular = "Luana";
+            c1.ContaNumero = 3;
+            this.AdicionaConta(c3);
         }
 
         private void btnDeposito_Click(object sender, EventArgs e)
@@ -60,6 +66,12 @@ namespace testando_solo
             textoTitular.Text = this.contas[indice].Titular;
             textoConta.Text = Convert.ToString(this.contas[indice].ContaNumero);
             textoSaldo.Text = Convert.ToString(this.contas[indice].Saldo);
+        }
+
+        private void botaoNovaConta_Click(object sender, EventArgs e)
+        {
+            FormCadastroConta formularioDeCadastro = new FormCadastroConta(this);
+            formularioDeCadastro.ShowDialog(); 
         }
     }
 }
