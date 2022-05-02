@@ -26,5 +26,10 @@ namespace testando_solo
             novaConta.ContaNumero = Convert.ToInt32(textoNumero.Text);
             this.formPrincipal.AdicionaConta(novaConta);
         }
+
+        private void FormCadastroConta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

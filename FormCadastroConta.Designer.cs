@@ -89,6 +89,7 @@
             this.Controls.Add(this.textoTitular);
             this.Name = "FormCadastroConta";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FormCadastroConta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
